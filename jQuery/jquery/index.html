@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery Test Job</title>
+		
+		<style>
+			#buttons{
+				width: 100px;
+			}
+			#buttons button{
+				width: 100%;
+				padding: 5px;
+				margin: 5px;
+			}
+		</style>
+	</head>
+<body>
+	<div id="buttons">
+		<button>1</button>
+		<button>2</button>
+		<button>3</button>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script>
+	
+	$('#buttons button').on('click', function(){
+		var container = $('#buttons');
+		
+		var detachButton = $(this).detach();
+		container.append(detachButton);
+	});
+	</script>
+</body>
+</html>
