@@ -54,5 +54,3 @@ if($query)
 }
 
 mysqli_close($link);
-
-?>
